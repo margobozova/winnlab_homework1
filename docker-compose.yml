@@ -7,12 +7,14 @@ services:
       - .:/usr/app
       - /usr/app/node_modules
     ports:
-      - 3008
+      - 3008:3008
     container_name: 'server'
-  nginx:
-    container_name: 'nginx'
-    image: 'nginx'
-    ports:
-      - 3033:80
+  second:
+    build: .
+    command: npm run start:dev-second
     volumes:
-      - ./volumes/conf.d:/etc/nginx/conf.d/default.conf
+      - .:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - 3000:3000
+    container_name: 'second'

@@ -1,5 +1,5 @@
 {
-  "name": "winnlab_homework1",
+  "name": "winnlab_homework2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -30,12 +30,15 @@
   },
   "scripts": {
     "start": "babel-node server",
+    "start:second": "babel-node second",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon --watch ./server -x \"npm run start\""
+    "start:dev": "nodemon --watch ./server -x \"npm run start\"",
+    "start:dev-second": "nodemon --watch ./second -x \"npm run start:second\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2"
   },
   "devDependencies": {
